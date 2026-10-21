@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+/* Área de Países */
+.countries-pool {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 50px;
+    margin-bottom: 2rem;
+}
+
+.country-card {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.country-card span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.country-card:active {
+    cursor: grabbing;
+}
+
+.country-card.dragging {
+    opacity: 0.4;
+}
+
+/* Zonas dos Continentes */
+.continents-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.dropzone {
+    flex: 1;
+    background-color: #fafafa;
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+    min-height: 110px;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.continent-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #475569;
+    pointer-events: none;
+}
+
+.dropzone.hovered {
+    background-color: #f1f5f9;
+}
+
+/* Feedbacks Visuais de Validação */
+.dropzone.correto {
+    border: 2px dashed #10b981;
+    background-color: #ecfdf5;
+}
+
+.dropzone.incorreto {
+    border: 2px dashed #ef4444;
+    background-color: #fef2f2;
+}

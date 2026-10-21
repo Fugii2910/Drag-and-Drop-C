@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos Continentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+        <h2>🌎 Encaixe o País no Continente</h2>
+
+        <!-- Área de origem dos países -->
+        <div class="countries-pool" id="pool">
+            <div class="country-card" draggable="true" id="brasil" data-continente="america-do-sul">
+                Brasil <span>BR</span>
+            </div>
+            <div class="country-card" draggable="true" id="japao" data-continente="asia">
+                Japão <span>JP</span>
+            </div>
+            <div class="country-card" draggable="true" id="franca" data-continente="europa">
+                França <span>FR</span>
+            </div>
+        </div>
+
+        <!-- Zonas de soltura (Continentes) -->
+        <div class="continents-container">
+            <div class="dropzone" id="america-do-sul" data-continente="america-do-sul">
+                <span class="continent-title">América do Sul</span>
+            </div>
+
+            <div class="dropzone" id="europa" data-continente="europa">
+                <span class="continent-title">Europa</span>
+            </div>
+
+            <div class="dropzone" id="asia" data-continente="asia">
+                <span class="continent-title">Ásia</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
